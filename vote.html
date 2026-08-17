@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Make Your Prediction 💙🩷</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="float f1">☁️</div><div class="float f2">⭐</div><div class="float f3">🎈</div>
+<main class="card">
+ <div class="emoji">🔮</div>
+ <p class="eyebrow">YOUR TURN</p>
+ <h1 id="hello">Make your prediction</h1>
+ <p class="sub">What is your guess?</p>
+ <div class="choices">
+   <button class="choice boy" onclick="vote('Boy')"><span class="big">👦🏻</span><b>BOY</b><small>Little prince 💙</small></button>
+   <button class="choice girl" onclick="vote('Girl')"><span class="big">👧🏻</span><b>GIRL</b><small>Little princess 🩷</small></button>
+ </div>
+ <p class="tiny">Choose one — and keep your prediction secret! 🤫</p>
+</main>
+<script>
+const n=localStorage.getItem('voterName');
+if(!n) location.href='index.html';
+document.getElementById('hello').textContent='Hi '+n+'! 👋';
+function vote(v){
+ localStorage.setItem('vote',v);
+ location.href='thankyou.html';
+}
+</script>
+</body>
+</html>

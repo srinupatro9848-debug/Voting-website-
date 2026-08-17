@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Baby Shower Prediction 💕</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="float f1">🍼</div><div class="float f2">🧸</div><div class="float f3">🎀</div>
+<main class="card">
+  <div class="emoji">👶</div>
+  <p class="eyebrow">A LITTLE PREDICTION GAME</p>
+  <h1>Who do you think<br>is coming? 💕</h1>
+  <p class="sub">Join us for a little baby-shower fun!</p>
+  <label for="name">Your name</label>
+  <input id="name" maxlength="30" placeholder="Enter your name">
+  <button onclick="start()">Continue ✨</button>
+  <p id="error"></p>
+</main>
+<script>
+function start(){
+ const n=document.getElementById('name').value.trim();
+ if(!n){document.getElementById('error').textContent='Please enter your name 😊';return;}
+ localStorage.setItem('voterName',n);
+ location.href='vote.html';
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Thank You 💕</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="confetti">✦　♡　✦　♡　✦</div>
+<main class="card result">
+ <div id="art" class="result-art"></div>
+ <p class="eyebrow">PREDICTION RECEIVED!</p>
+ <h1 id="title"></h1>
+ <p id="message" class="sub"></p>
+ <div class="love">Made with love for our baby shower 💕</div>
+ <button class="again" onclick="location.href='index.html'">Vote again</button>
+</main>
+<script>
+const n=localStorage.getItem('voterName'), v=localStorage.getItem('vote');
+if(!n||!v) location.href='index.html';
+if(v==='Boy'){
+ art.innerHTML='👶🏻💙🧸';
+ title.textContent='You voted BOY! 💙';
+ message.textContent='Thank you, '+n+'! Love you for voting! 🥰';
+}else{
+ art.innerHTML='👶🏻🩷🧸';
+ title.textContent='You voted GIRL! 🩷';
+ message.textContent='Thank you, '+n+'! Love you for voting! 🥰';
+}
+</script>
+</body>
+</html>

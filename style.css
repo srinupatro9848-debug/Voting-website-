@@ -1,0 +1,31 @@
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff3f8,#eef8ff);display:flex;justify-content:center;align-items:center;padding:22px;color:#4b4650;overflow:hidden}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 20% 15%,#fff 0 8%,transparent 25%),radial-gradient(circle at 85% 85%,#fff 0 7%,transparent 24%);pointer-events:none}
+.card{position:relative;width:min(100%,470px);background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.9);border-radius:34px;padding:34px 27px;text-align:center;box-shadow:0 24px 70px rgba(85,75,100,.16);z-index:2;backdrop-filter:blur(8px)}
+.emoji{font-size:70px;line-height:1;margin-bottom:14px}
+.eyebrow{letter-spacing:2px;font-size:11px;font-weight:800;margin:0 0 10px;color:#a78b9a}
+h1{font-size:32px;line-height:1.15;margin:0 0 12px;color:#403b43}
+.sub{font-size:17px;color:#7b737c;margin:0 0 25px;line-height:1.5}
+label{display:block;text-align:left;font-size:13px;font-weight:700;margin:0 3px 7px}
+input{width:100%;border:1.5px solid #eadfe6;background:#fff;padding:16px;border-radius:16px;font-size:16px;outline:none;margin-bottom:13px}
+input:focus{border-color:#e9a9c7;box-shadow:0 0 0 4px rgba(233,169,199,.15)}
+button{width:100%;border:0;border-radius:16px;padding:16px;font-size:17px;font-weight:800;color:white;background:linear-gradient(135deg,#df8eb2,#c983a9);box-shadow:0 10px 20px rgba(201,131,169,.25);cursor:pointer}
+#error{color:#d95c7f;font-size:13px;font-weight:600;min-height:20px}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0 15px}
+.choice{height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#fff;border-radius:23px;padding:12px;box-shadow:none}
+.choice.boy{background:linear-gradient(145deg,#76b9f5,#5595df)}
+.choice.girl{background:linear-gradient(145deg,#f6a5c4,#df7ea9)}
+.choice .big{font-size:57px;line-height:1}
+.choice b{font-size:20px;letter-spacing:1px}
+.choice small{font-size:12px;opacity:.9}
+.tiny{font-size:12px;color:#9a9198}
+.result-art{font-size:76px;margin:4px 0 18px;animation:bounce 1.5s infinite}
+.result h1{font-size:30px}
+.love{margin:25px 0 15px;padding:13px;border-radius:15px;background:#fff5f8;color:#9d6d83;font-size:13px;font-weight:700}
+.again{background:#eee7ec;color:#6d626b;box-shadow:none;font-size:14px}
+.float{position:fixed;font-size:34px;opacity:.55;z-index:1;animation:float 5s ease-in-out infinite}
+.f1{left:7%;top:13%}.f2{right:9%;top:20%;animation-delay:1s}.f3{left:10%;bottom:15%;animation-delay:2s}
+.confetti{position:fixed;top:7%;font-size:25px;color:#e7a3bd;opacity:.7;z-index:1}
+@keyframes float{50%{transform:translateY(-18px) rotate(7deg)}}
+@keyframes bounce{50%{transform:translateY(-9px) scale(1.05)}}
+@media(max-width:390px){.card{padding:28px 19px}h1{font-size:28px}.choice{height:170px}.choice .big{font-size:48px}}
